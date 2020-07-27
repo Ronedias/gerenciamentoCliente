@@ -1,0 +1,111 @@
+<h3>Criar Cliente</h3>
+
+  
+<form class="form-horizontal"  (ngSubmit)="onSubmit()">
+    
+  
+    <div class="form-group">
+    <div class="col-sm-3">
+      <label for="name"> Nome</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="nome" required [(ngModel)]="cliente.nome" name="Nome">
+    </div> 
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Documento Identificação</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="docIdentificacao" required [(ngModel)]="cliente.cpfCnpj" name="Documento Identificacao">
+    </div> 
+  </div>
+
+
+<div class="form-group">
+<div class="col-sm-12">
+  <label for="name">Email</label>
+  <input type="text" class="form-control" id="email" required [(ngModel)]="cliente.email" name="email">
+</div>
+</div>
+  
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Data Nascimento</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="dtNascimento" required [(ngModel)]="cliente.dtNascimento" name="Data Nascimento">
+    </div> 
+  </div>
+
+
+
+<!-- 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="cep" class="control-label">CEP</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="cep" [formControl]="cep">
+    </div> 
+</div> -->
+
+<!-- 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Número</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="numero" [formControl]="numero">
+    </div> 
+</div>
+
+
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="complemento" class="control-label">Complemento</label>
+    </div>
+    <div class="col-sm-12">
+      <input type="text" class="form-control" id="complemento" [formControl]="complemento">
+    </div> 
+</div>
+
+    
+   <div class="col-sm-12">
+    <label for="name">Logradouro</label>
+    <input type="number" class="form-control" id="endereco" required [(ngModel)]="cliente.endereco" name="tipo">
+  </div>
+
+  <div class="col-sm-12">
+    <label for="name">Bairro</label>
+    <input type="number" class="form-control" id="endereco" required [(ngModel)]="cliente.endereco" name="tipo">
+  </div> -->
+
+  
+
+  
+      <!--  FORM SELECT 1 [formGroup]="select"  -->
+      <div   class="col-sm-5">
+          <label for="estado" class="control-label">Estado:</label>
+          <select
+            class="form-control" id="estado">
+            
+            <option *ngFor="let estado of estados">{{ estado.nome }}</option> 
+
+        </select>
+       
+      </div>
+    <br>
+
+    <button type="submit" class="btn btn-success">Cadastro</button>
+  </form>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>

@@ -1,0 +1,37 @@
+<h2>Detalhes Clientes</h2> 
+
+<hr/>
+<div *ngIf="cliente">
+  <div>
+    <label><b>Nome: </b></label> {{cliente.nome}}
+  </div>
+  <div>
+    <label><b>Documento Identificação: </b></label> {{cliente.cpfCnpj}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{cliente.email}}
+  </div>  
+  <div>
+    <label><b>Tipo Cliente: </b></label> {{cliente.tipoCliente}}
+  </div>  
+  <div>
+    <label><b>Data Nascimento: </b></label> {{cliente.dtNascimento}}
+  </div> 
+
+
+  <div>
+    <label><b>Endereco: </b></label> 
+    {{cliente.endereco.logradouro}}
+    {{cliente.endereco.complemento}}
+    {{cliente.endereco.numero}}
+    {{cliente.endereco.bairro}}
+  </div>
+  <div>
+    <label><b>Cep: </b></label> {{cliente.endereco.cep}}
+  </div>  
+
+  </div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar Lista de Clientes</button><br>

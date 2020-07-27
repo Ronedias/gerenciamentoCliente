@@ -1,0 +1,180 @@
+<h3>Criar Cliente</h3>
+
+  
+<div class="form-horizontal"  (ngSubmit)="onSubmit()">
+    
+  
+    <div class="form-group">
+    <div class="col-sm-3">
+      <label for="name"> Nome</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="nome" required [(ngModel)]="cliente.nome" name="Nome">
+    </div> 
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Documento Identificação</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="docIdentificacao" required [(ngModel)]="cliente.cpfCnpj" name="Documento Identificacao">
+    </div> 
+  </div>
+
+
+<div class="form-group">
+<div class="col-sm-12">
+  <label for="name">Email</label>
+  <input type="text" class="form-control" id="email" required [(ngModel)]="cliente.email" name="email">
+</div>
+</div>
+  
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Data Nascimento</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="dtNascimento" required [(ngModel)]="cliente.dtNascimento" name="Data Nascimento">
+    </div> 
+  </div>
+
+
+
+<!-- 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="cep" class="control-label">CEP</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="cep" [formControl]="cep">
+    </div> 
+</div> -->
+
+<!-- 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="name">Número</label>
+    </div>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="numero" [formControl]="numero">
+    </div> 
+</div> -->
+
+
+<!-- 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <label for="complemento" class="control-label">Complemento</label>
+    </div>
+    <div class="col-sm-12">
+      <input type="text" class="form-control" id="complemento" [formControl]="complemento">
+    </div> 
+</div>
+
+    
+   <div class="col-sm-12">
+    <label for="name">Logradouro</label>
+    <input type="number" class="form-control" id="endereco" required [(ngModel)]="cliente.endereco" name="tipo">
+  </div>
+
+  <div class="col-sm-12">
+    <label for="name">Bairro</label>
+    <input type="number" class="form-control" id="endereco" required [(ngModel)]="cliente.endereco" name="tipo">
+  </div> -->
+
+  <!-- <div  class="col-sm-5">
+    <label for="estado" class="control-label">UF</label>
+    <select class="form-control" id="estado"  required [(ngModel)]="estadoId" (ngModelChange)="onAddCidade()" >
+      <option>Selecione um Estado</option>
+      <option *ngFor="let estado of estados">{{ estado.nome }}</option>
+    </select>
+</div>  -->
+
+
+<div  class="col-sm-5">
+  <label for="estado" class="control-label">UF</label>
+  <select class="form-control" type="number" required [(ngModel)]="estadoId" (ngModelChange)="onAddEstado()">
+             
+    <option  value="1">Acre</option>
+    <option  value="2">Alagoas</option>
+    <option  value="3">Amapá</option>
+    <option  value="4">Amazonas</option>
+    <option  value="5">Bahia</option>
+    <option  value="6">Ceará</option>
+    <option  value="7">Espírito Santo</option>
+    <option  value="8">Goiás</option>
+    <option  value="9">Maranhão</option>
+    <option  value="10">Mato Grosso</option>
+    <option  value="11">Mato Grosso do Sul</option>
+    <option  value="12">Minas Gerais</option>
+    <option  value="13">Pará</option>
+    <option  value="14">Paraíba</option>
+    <option  value="15">Paraná</option>
+    <option  value="16">Pernambuco</option>
+    <option  value="17">Piauí</option>
+    <option  value="18">Rio de Janeiro</option>
+    <option  value="19">Rio Grande do Norte</option>
+    <option  value="20">Rio Grande do Sul</option>
+    <option  value="21">Rondônia</option>
+    <option  value="22">Roraima</option>
+    <option  value="23">Santa Catarina</option>
+    <option  value="24">São Paulo</option>
+    <option  value="25">Sergipe	</option>
+    <option  value="26">	Tocantins	</option>
+    <option value="27">	Distrito Federal	</option>
+ 
+  </select>
+</div> 
+
+  
+<div  class="col-sm-5">
+  <label for="cidade" class="control-label">Cidade</label>
+  <select class="form-control" type="number" required [(ngModel)]="cidadeId" (ngModelChange)="onAddCidade()" >
+    <option value="1">Brasí­lia</option> 
+    <option value="2">Riacho Fundo</option>
+    <option value="3">Candangolândia</option>
+    <option value="4">Samambaia</option>
+    <option value="5">Guará</option>
+    <option value="6">São Sebastião</option>
+    <option value="7">Ceilândia</option>
+    <option value="8">Lago Norte</option>
+    <option value="9">Sobradinho</option>
+    <option value="10">Lago Sul</option>
+    <option value="11">Gama</option>
+    <option value="12">Santa Maria</option>
+    <option value="13">Taguatinga</option>
+    <option value="14">Planaltina</option>
+    <option value="15">Brasí­lia</option>
+    <option value="16">Recanto das Emas</option>
+    <option value="17">Cruzeiro</option>
+    <option value="18">Brazlândia</option>
+    <option value="19">Paranoá</option>
+    <option value="20">Núcleo Bandeirante</option>
+  </select>
+</div> 
+
+
+  <div  class="col-sm-5">
+    <label for="tipo" class="control-label">Tipo Cliente</label>
+    <select class="form-control" type="number" required [(ngModel)]="tipoId" (ngModelChange)="onAddTipo()" >
+            <option value="1">Pessoa Fisica</option> 
+            <option value="2">Pessoa Juridica</option> 
+    </select>
+</div> 
+
+    <br>
+  </div>
+    
+    
+    <form class="form-horizontal"  (ngSubmit)="onSubmit()">
+      <button type="submit" class="btn btn-success">Cadastro</button>
+    </form>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
